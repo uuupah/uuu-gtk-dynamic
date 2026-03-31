@@ -39,22 +39,32 @@ $yellow-dark: #ffcb6b; // base13 - fall back to base0a
 // Grey
 $grey-050: #ffffff; // base07
 $grey-100: #eeeeee; // base06
-$grey-150: #e7e7e8;
-$grey-200: #d3e1e8;
-$grey-250: #cfd8dc;
-$grey-300: #d2d4d5;
-$grey-350: #aabfc9;
+$grey-150: #e7e7e8; // replace with base06
+$grey-200: #d3e1e8; // replace with base06
+//$grey-250: #cfd8dc; // not used - remove
+$grey-300: #d2d4d5; // replace with base04
+//$grey-350: #aabfc9; // not used - remove
 $grey-400: #94a7b0; // base04
-$grey-450: #8796b0;
-$grey-500: #8b91a7;
+$grey-450: #8796b0; // replace with base04
+$grey-500: #8b91a7; // replace with base03
 $grey-550: #737b96; // base03
 $grey-600: #606780; // base02
 $grey-650: #585e74; // base01
 $grey-700: #464b5d; // base00
+// magick xc:"#464bfd" -fill black -colorize 16% -depth 8 -format "%[hex:u]" info:
+$grey-750: mix($grey-700, black, 85);
 $grey-750: #3b3f51;
+// magick xc:"#464bfd" -fill black -colorize 50% -depth 8 -format "%[hex:u]" info:
+$grey-750: mix($grey-700, black, 50);
 $grey-800: #232637;
+// magick xc:"#464bfd" -fill black -colorize 56% -depth 8 -format "%[hex:u]" info:
+$grey-750: mix($grey-700, black, 45);
 $grey-850: #1f2233;
+// magick xc:"#464bfd" -fill black -colorize 63% -depth 8 -format "%[hex:u]" info:
+$grey-750: mix($grey-700, black, 38);
 $grey-900: #1a1c25;
+// magick xc:"#464bfd" -fill black -colorize 87% -depth 8 -format "%[hex:u]" info:
+$grey-750: mix($grey-700, black, 13);
 $grey-950: #090b10;
 
 // White

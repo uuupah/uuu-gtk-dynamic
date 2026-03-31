@@ -22,7 +22,7 @@ fi
 
 SASSC_OPT="-M -t expanded"
 
-THEME_NAME=Material
+THEME_NAME=uuu-dynamic
 THEME_VARIANTS=('' '-Green' '-Grey' '-Orange' '-Pink' '-Purple' '-Red' '-Teal' '-Yellow')
 COLOR_VARIANTS=('-Light' '-Dark')
 SIZE_VARIANTS=('' '-Compact')
