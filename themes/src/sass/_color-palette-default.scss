@@ -1,56 +1,56 @@
 // Material Deep-Ocean/Lighter Theme Color Palette
 
 // Blue
-$blue-light: #6182b8;
-$blue-dark: #82aaff;
+$blue-light: #6182b8; // base0d
+$blue-dark: #82aaff; // base16 - fall back to base08
 
 // Cyan
-$cyan-light: #067a82;
+$cyan-light: #067a82; // can this, replace with teal
 $cyan-dark: #71c6e7;
 
 // Green
-$green-light: #91b859;
-$green-dark: #c3e88d;
+$green-light: #91b859; // base0b
+$green-dark: #c3e88d; // base14
 
 // Orange
-$orange-light: #f76d47;
-$orange-dark: #f78c6c;
+$orange-light: #f76d47; // base09
+$orange-dark: #f78c6c; // base09
 
 // Pink
-$pink-light: #ff5370;
-$pink-dark: #ff9cac;
+$pink-light: #ff5370; // base0e
+$pink-dark: #ff9cac; // base17 - fall back to base0e
 
 // Purple
-$purple-light: #7c4dff;
+$purple-light: #7c4dff; // can these and replace with pink
 $purple-dark: #c792ea;
 
 // Red
-$red-light: #e53935;
-$red-dark: #f07178;
+$red-light: #e53935; // base08
+$red-dark: #f07178; // base12 - fall back to base08
 
 // Teal
-$teal-light: #39adb5;
-$teal-dark: #89ddff;
+$teal-light: #39adb5; // base0c
+$teal-dark: #89ddff; // base16 - fall back to base16
 
 // Yellow
-$yellow-light: #f6a434;
-$yellow-dark: #ffcb6b;
+$yellow-light: #f6a434; // base0a
+$yellow-dark: #ffcb6b; // base13 - fall back to base0a
 
 // Grey
-$grey-050: #ffffff;
-$grey-100: #eeeeee;
+$grey-050: #ffffff; // base07
+$grey-100: #eeeeee; // base06
 $grey-150: #e7e7e8;
 $grey-200: #d3e1e8;
 $grey-250: #cfd8dc;
 $grey-300: #d2d4d5;
 $grey-350: #aabfc9;
-$grey-400: #94a7b0;
+$grey-400: #94a7b0; // base04
 $grey-450: #8796b0;
 $grey-500: #8b91a7;
-$grey-550: #737b96;
-$grey-600: #606780;
-$grey-650: #585e74;
-$grey-700: #464b5d;
+$grey-550: #737b96; // base03
+$grey-600: #606780; // base02
+$grey-650: #585e74; // base01
+$grey-700: #464b5d; // base00
 $grey-750: #3b3f51;
 $grey-800: #232637;
 $grey-850: #1f2233;
@@ -58,16 +58,16 @@ $grey-900: #1a1c25;
 $grey-950: #090b10;
 
 // White
-$white: #fafafa;
+$white: #fafafa; // base06
 
 // Black
-$black: #0f111a;
+$black: #0f111a; // base00, base11 if available
 
 // Theme
 $default-light: $blue-light;
 $default-dark: $blue-dark;
 
 // Button
-$button-close: if($topbar == 'light', #e53935, #f07178);
-$button-max: if($topbar == 'light', #91b859, #c3e88d);
-$button-min: if($topbar == 'light', #f6a434, #ffcb6b);
+$button-close: if($topbar == "light", #e53935, #f07178);
+$button-max: if($topbar == "light", #91b859, #c3e88d);
+$button-min: if($topbar == "light", #f6a434, #ffcb6b);
