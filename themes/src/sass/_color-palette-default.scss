@@ -1,83 +1,92 @@
 // Material Deep-Ocean/Lighter Theme Color Palette
+@import "./base16";
 
 // Blue
-$blue-light: #6182b8; // base0d
-$blue-dark: #82aaff; // base16 - fall back to base08
-
-// Cyan
-$cyan-light: #067a82; // can this, replace with teal
-$cyan-dark: #71c6e7;
+$blue-light: $base0D; // base0d
+$blue-dark: $base0D;
+@if variable-exists("base16") {
+  $blue-dark: $base16; // base16 - fall back to base08
+}
 
 // Green
-$green-light: #91b859; // base0b
-$green-dark: #c3e88d; // base14
+$green-light: $base0B; // base0b
+$green-dark: $base0B;
+@if variable-exists("base14") {
+  $green-dark: $base14; // base14 - fall back to base 0B
+}
 
 // Orange
-$orange-light: #f76d47; // base09
-$orange-dark: #f78c6c; // base09
+$orange-light: $base09; // base09
+$orange-dark: $base09; // base09
 
 // Pink
-$pink-light: #ff5370; // base0e
-$pink-dark: #ff9cac; // base17 - fall back to base0e
+$pink-light: $base0E; // base0e
+$pink-dark: $base0E;
+@if variable-exists("base17") {
+  $pink-dark: $base17; // base17 - fall back to base0e
+}
 
 // Purple
-$purple-light: #7c4dff; // can these and replace with pink
-$purple-dark: #c792ea;
+$purple-light: $pink-light; // can these and replace with pink
+$purple-dark: $pink-dark;
 
 // Red
-$red-light: #e53935; // base08
-$red-dark: #f07178; // base12 - fall back to base08
+$red-light: $base08; // base08
+$red-dark: $base08;
+@if variable-exists("base12") {
+  $red-dark: $base12; // base12 - fall back to base08
+}
 
 // Teal
-$teal-light: #39adb5; // base0c
-$teal-dark: #89ddff; // base16 - fall back to base16
+$teal-light: $base0C; // base0c
+$teal-dark: $base0C;
+@if variable-exists("base15") {
+  $teal-dark: $base15; // base15 - fall back to base0c
+}
+
+// Cyan
+$cyan-light: $teal-light; // can this, replace with teal
+$cyan-dark: $teal-dark;
 
 // Yellow
-$yellow-light: #f6a434; // base0a
-$yellow-dark: #ffcb6b; // base13 - fall back to base0a
+$yellow-light: $base0A; // base0a
+$yellow-dark: $base0A; // base13 - fall back to base0a
+@if variable-exists("base13") {
+  $yellow-dark: $base13;
+}
 
 // Grey
-$grey-050: #ffffff; // base07
-$grey-100: #eeeeee; // base06
-$grey-150: #e7e7e8; // replace with base06
-$grey-200: #d3e1e8; // replace with base06
-//$grey-250: #cfd8dc; // not used - remove
-$grey-300: #d2d4d5; // replace with base04
-//$grey-350: #aabfc9; // not used - remove
-$grey-400: #94a7b0; // base04
-$grey-450: #8796b0; // replace with base04
-$grey-500: #8b91a7; // replace with base03
-$grey-550: #737b96; // base03
-$grey-600: #606780; // base02
-$grey-650: #585e74; // base01
-$grey-700: #464b5d; // base00
-// magick xc:"#464bfd" -fill black -colorize 16% -depth 8 -format "%[hex:u]" info:
+$grey-050: $base07; // base07
+$grey-100: $base06; // base06
+$grey-150: $base06; // replace with base06
+$grey-200: $base05; // replace with base06
+$grey-250: $base05; // not used - remove
+$grey-300: $base04; // replace with base04
+$grey-400: $base04; // base04
+$grey-350: $base04; // not used - remove
+$grey-450: $base04; // replace with base04
+$grey-500: $base03; // replace with base03
+$grey-550: $base03; // base03
+$grey-600: $base02; // base02
+$grey-650: $base01; // base01
+$grey-700: $base00; // base00
 $grey-750: mix($grey-700, black, 85);
-$grey-750: #3b3f51;
-// magick xc:"#464bfd" -fill black -colorize 50% -depth 8 -format "%[hex:u]" info:
-$grey-750: mix($grey-700, black, 50);
-$grey-800: #232637;
-// magick xc:"#464bfd" -fill black -colorize 56% -depth 8 -format "%[hex:u]" info:
-$grey-750: mix($grey-700, black, 45);
-$grey-850: #1f2233;
-// magick xc:"#464bfd" -fill black -colorize 63% -depth 8 -format "%[hex:u]" info:
-$grey-750: mix($grey-700, black, 38);
-$grey-900: #1a1c25;
-// magick xc:"#464bfd" -fill black -colorize 87% -depth 8 -format "%[hex:u]" info:
-$grey-750: mix($grey-700, black, 13);
-$grey-950: #090b10;
+$grey-800: mix($grey-700, black, 50);
+$grey-850: mix($grey-700, black, 45);
+$grey-900: mix($grey-700, black, 38);
+$grey-950: mix($grey-700, black, 13);
 
 // White
-$white: #fafafa; // base06
+$white: $base06; // base06
 
 // Black
-$black: #0f111a; // base00, base11 if available
+$black: $base00; // base00, base11 if available
 
 // Theme
 $default-light: $blue-light;
 $default-dark: $blue-dark;
 
 // Button
-$button-close: if($topbar == "light", #e53935, #f07178);
-$button-max: if($topbar == "light", #91b859, #c3e88d);
-$button-min: if($topbar == "light", #f6a434, #ffcb6b);
+$button-close: if($topbar == "light", $red-light, $red-dark);
+$button-max: if($topbar == "light", $green-light, $green-dark);
+$button-min: if($topbar == "light", $yellow-light, $yellow-dark);
